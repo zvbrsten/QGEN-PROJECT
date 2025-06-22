@@ -8,8 +8,8 @@ import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 const AIResponsePreview = ({content}) => {
     if(!content) return null
   return (
-     <div className="max-w-4xl mx-auto">
-      <div className="text-[14px] prose prose-slate dark:prose-invert max-w-none">
+     <div className="max-w-4xl mx-auto bg-white">
+      <div className="text-[14px]  max-w-none">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
@@ -25,7 +25,7 @@ const AIResponsePreview = ({content}) => {
                   language={language}
                 />
               ) : (
-                <code className="px-1 py-0.5 bg-gray-100 rounded text-sm" {...props}>
+                <code className="px-1 py-0.5 bg-white rounded text-sm" {...props}>
                   {children}
                 </code>
               );
@@ -76,7 +76,7 @@ const AIResponsePreview = ({content}) => {
               );
             },
             thead({ children }) {
-              return <thead className="bg-gray-50">{children}</thead>;
+              return <thead className="bg-white-50">{children}</thead>;
             },
             tbody({ children }) {
               return <tbody className="divide-y divide-gray-200">{children}</tbody>;
@@ -114,8 +114,8 @@ function CodeBlock({ code, language }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  return <div className="relative my-6 rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
-      <div className="flex items-center justify-between px-4 py-2 bg-gray-100 border-b border-gray-200">
+  return <div className="relative my-6 rounded-lg overflow-hidden bg-white border border-gray-200">
+      <div className="flex items-center justify-between px-4 py-2 bg-white border-b border-gray-200">
         <div className="flex items-center space-x-2">
           <LuCode size={16} className="text-gray-500" />
           <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide">
@@ -133,7 +133,7 @@ function CodeBlock({ code, language }) {
             <LuCopy size={16} />
           )}
           {copied && (
-            <span className="absolute -top-8 right-0 bg-black text-white text-xs rounded-md px-2 py-1 opacity-80 group-hover:opacity-100 transition">
+            <span className="absolute -top-8 right-0 bg-white text-white text-xs rounded-md px-2 py-1 opacity-80 group-hover:opacity-100 transition">
               Copied!
             </span>
           )}
@@ -143,7 +143,7 @@ function CodeBlock({ code, language }) {
       <SyntaxHighlighter 
         language={language} 
         style={oneLight} 
-        customStyle={{ fontSize:12.5, margin: 0, padding: '1rem', background: 'transparent' }}
+        customStyle={{ fontSize:12.5, margin: 0, padding: '2rem', background: 'transparent' }}
       >
         {code}
       </SyntaxHighlighter>
