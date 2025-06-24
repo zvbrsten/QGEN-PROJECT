@@ -4,6 +4,8 @@ QGen is a full-stack web application that helps users prepare for job interviews
 🌐 Live Site
 https://qgen-project.vercel.app/
 
+⚙️ Backend Repository : https://github.com/zvbrsten/QGEN-PROJECT-BACKEND
+
 🚀 Features
 
 
