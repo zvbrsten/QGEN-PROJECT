@@ -4,6 +4,7 @@ QGen is a full-stack web application that helps users prepare for job interviews
 
 🚀 Features
 🔐 User Authentication – Secure signup and login using JWT
+
 🧑‍💼 Role-Based Q&A Generation – Choose job role, topics, and experience level to get relevant questions
 🤖 AI-Powered Answers – Gemini API provides both brief and detailed responses
 💾 Session Saving – Automatically saves generated questions and answers
